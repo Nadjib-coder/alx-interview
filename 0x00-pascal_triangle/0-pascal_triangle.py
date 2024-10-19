@@ -1,4 +1,4 @@
-#!user/bin/python3
+#!/usr/bin/env python3
 """
 this module containt pascal triangle function
 that create specific number of row
