@@ -1,8 +1,4 @@
-#!/usr/bin/env python3
-"""
-this module containt pascal triangle function
-that create specific number of row
-"""
+#!/usr/bin/python3
 
 def pascal_triangle(n):
     if n <= 0:
