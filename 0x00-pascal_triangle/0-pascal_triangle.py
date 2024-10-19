@@ -1,3 +1,9 @@
+#!user/bin/python3
+"""
+this module containt pascal triangle function
+that create specific number of row
+"""
+
 def pascal_triangle(n):
     if n < 0:
         return []
