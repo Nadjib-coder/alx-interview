@@ -13,12 +13,13 @@ def makeChange(coins, total):
         return -1
     if total <= 0:
         return 0
-    change = 0
-    coins = sorted(coins)[::-1]
+   # Initialize a DP array with a value greater than any possible answer
+    dp = [float('inf')] * (total + 1)
+    dp[0] = 0  # Base case: 0 coins are needed for a total of 0
+
+    # Build the DP array
     for coin in coins:
-        while coin <= total:
-            total -= coin
-            change += 1
-        if (total == 0):
-            return change
-    return -1
+        for i in range(coin, total + 1):
+            dp[i] = min(dp[i], dp[i - coin] + 1)
+
+    return dp[total] if dp[total] != float('inf') else -1
