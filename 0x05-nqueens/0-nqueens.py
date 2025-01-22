@@ -18,6 +18,7 @@ if n < 4:
     exit(1)
 
 
+# Backtracking function to find all solutions
 def queens(n, i=0, a=[], b=[], c=[]):
     """Find possible positions for queens."""
     if i < n:
